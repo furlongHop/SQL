@@ -49,6 +49,13 @@ where department_id = 10
 or department_id = 90
 or department_id = 100;
 
+select  first_name,
+        salary,
+        to_char(hire_date,'YYYY-MM'),
+        department_id
+from employees
+where department_id in(10,90,100);
+
 --문제 7.
 select  first_name,
         salary
@@ -72,4 +79,4 @@ select  first_name,
         replace(phone_number,'.','-'),
         hire_date
 from employees
-where hire_date < '03/12/31';
+where hire_date <= '03/12/31';
