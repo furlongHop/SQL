@@ -101,6 +101,14 @@ select  em.first_name,
         de.department_name
 from departments de, employees em
 where de.department_id = em.department_id(+);
+/*
+ department_id와 department_name는 총 27종이지만 그 중 16개는 사용되지 않는다. (직원이 존재하지 않는다.) 
+ 따라서 employee를 기준으로 join한 것을 department 기준으로 바꾸면(employee 전부 출력>department 전부 출력)
+ 직원이 존재하지 않는 department_id와 department_name 항목도 전부 출력된다.
+ 이때 직원이 없는 부서 아이디, 즉 employee의 em.department_id는 존재하지 않지만(null)
+ 부서 테이블의 부서 아이디, de.department_id는 전부 출력을 명령받았으므로 null이 아닌 실제 값이 출력된다. 
+ */
+
 
 --full outer join: 양쪽 데이터 모두 출력
 select  em.first_name,
