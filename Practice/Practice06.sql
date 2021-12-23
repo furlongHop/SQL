@@ -80,3 +80,6 @@ select  b.book_id,b.title,b.pubs,b.pub_date,
         a.author_id,a.author_name,a.author_desc
 from book b, author a
 where b.author_id = a.author_id;
+
+--8. table 저장
+commit;
