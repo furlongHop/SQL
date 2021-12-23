@@ -118,4 +118,13 @@ drop table author; --author 테이블 삭제
 책 테이블의 fk가 붕 떠버리는 사태가 발생한다.(참조 데이터 실종) 
 따라서 작가 테이블과 연결된 fk를 가진 책 테이블을 먼저 삭제해야 오류 발생 없이 삭제 가능하다.*/
 
-
+-- SEQUENCE 생성 구문 형식
+/*
+CREATE SEQUENCE 시퀀스명
+INCREMENT BY 증감숫자
+START WITH 시작숫자
+NOMINVALUE | MINVALUE 최솟값
+NOMAXVALUE | MAXVALUE 최댓값
+NOCYCLE | CYCLE
+NOCACHE | CACHE;
+*/
