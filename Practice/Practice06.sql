@@ -83,3 +83,17 @@ where b.author_id = a.author_id;
 
 --8. table 저장
 commit;
+
+--9. book table 삭제
+drop table book;
+drop sequence seq_book_id;
+
+--10. author table 삭제
+drop table author;
+drop sequence seq_author_id;
+
+--11. 확인
+select * from author;
+
+--12. rollback
+rollback;
