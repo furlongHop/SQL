@@ -128,3 +128,9 @@ NOMAXVALUE | MAXVALUE 최댓값
 NOCYCLE | CYCLE
 NOCACHE | CACHE;
 */
+
+/*데이터를 넣고 변경하고 지우는 과정은 전부 임시 작업으로 인식된다. 프로그램 종료 후 다시 실행했을 때도
+ 사용할 수 았도록 데이터를 실제로 저장하고 싶다면 commit이라는 명령어를 사용해야 한다.
+ commit의 대상: insert, update, delete, select(DML)
+ rollback: commit하지 않은 데이터 전부 롤백. 임시 작업으로 진행된 과정을 전부 지워주는 명령어.
+ -->ex)이체 과정 생각해보기. 과정 중 오류가 난 부분부터 롤백. 다시 정상 진행 후 commit.*/
