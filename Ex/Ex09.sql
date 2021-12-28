@@ -133,4 +133,12 @@ NOCACHE | CACHE;
  사용할 수 았도록 데이터를 실제로 저장하고 싶다면 commit이라는 명령어를 사용해야 한다.
  commit의 대상: insert, update, delete, select(DML)
  rollback: commit하지 않은 데이터 전부 롤백. 임시 작업으로 진행된 과정을 전부 지워주는 명령어.
- -->ex)이체 과정 생각해보기. 과정 중 오류가 난 부분부터 롤백. 다시 정상 진행 후 commit.*/
+ -->ex)이체 과정 생각해보기. 과정 중 오류가 난 부분부터 롤백. 다시 정상 진행 후 commit.
+ oracle과 다르게 eclipse는 임시 작업 과정이 없으므로 commit 명령어가 없어도 자동 저장이 된다. 롤백 불가.*/
+
+/*
+ sql은 임시 작업 과정이 있기 때문에 commit 하기 전까지는 해당 데이터가 commit 될지 rollback 될지 알 수 없다.
+ 때문에 해당 데이터에 자바 jdbc로 접근할 경우 어긋날 수 있다. commit된 데이터가 아니라 delete가 안 되는 것이다.
+ 이 경우 해당 데이터를 sql에서 commit 해주어야 원하는 작업을 실행할 수 있다. 주의할 것. 
+ * 
+ */*/
