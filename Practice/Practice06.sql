@@ -94,6 +94,8 @@ drop sequence seq_author_id;
 
 --11. 확인
 select * from author;
+/*테이블 데이터를 전부 확인할 대 보통 *를 쓰지만 실제 프로그램 작동시엔 출력 컬럼명을 전부 표시하는 방법을 사용해야 한다.
+ '*'로 전부 출력하는 건 테스트할 때만 사용하도록 하자.*/
 
 --12. rollback
 rollback;
